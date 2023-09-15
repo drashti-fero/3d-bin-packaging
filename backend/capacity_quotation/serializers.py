@@ -100,7 +100,7 @@ class CapacityQuotationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = models.CapacityQuotation
-        fields = ("bins", "items")
+        fields = ("bins", "items", "ref_no")
 
     def validate_bins(self, value):
         bins_data = []

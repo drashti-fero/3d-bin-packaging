@@ -7,8 +7,6 @@ from .models import PackagingSpaces, Item, CapacityQuotation
 class PackagingSpacesAdmin(admin.ModelAdmin):
     list_display = (
         'id',
-        'created',
-        'modified',
         'packaging_space_id',
         'length',
         'width',
@@ -16,17 +14,11 @@ class PackagingSpacesAdmin(admin.ModelAdmin):
         'weight',
         'max_weight_capacity',
         'packaging_type',
+        'created',
     )
     list_filter = (
         'created',
         'modified',
-        'id',
-        'packaging_space_id',
-        'length',
-        'width',
-        'height',
-        'weight',
-        'max_weight_capacity',
         'packaging_type',
     )
 
@@ -34,23 +26,17 @@ class PackagingSpacesAdmin(admin.ModelAdmin):
 class ItemAdmin(admin.ModelAdmin):
     list_display = (
         'id',
-        'created',
-        'modified',
         'sku',
         'length',
         'width',
         'height',
         'weight',
+        'created',
+
     )
     list_filter = (
         'created',
-        'modified',
-        'id',
-        'sku',
-        'length',
-        'width',
-        'height',
-        'weight',
+        'modified'
     )
 
 
@@ -58,18 +44,11 @@ class CapacityQuotationAdmin(admin.ModelAdmin):
     list_display = (
         'id',
         'created',
-        'modified',
         'ref_no',
-        'payload',
-        'response',
     )
     list_filter = (
         'created',
         'modified',
-        'id',
-        'ref_no',
-        'payload',
-        'response',
     )
     formfield_overrides = {JSONField: {"widget": JSONEditorWidget}}
 

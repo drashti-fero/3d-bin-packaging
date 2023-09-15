@@ -45,5 +45,5 @@ class CapacityQuotationViewSet(BaseViewSet):
         payload = serializer.validated_data
         api = api_wrapper.ThreeDBinPackingAPI(payload=payload)
         response = api.make_request()
-        models.CapacityQuotation.objects.create(payload=api.payload, response=response)
+        models.CapacityQuotation.objects.create(ref_no=payload.get("ref_no"), payload=api.payload, response=response)
         return Response(response, status=status.HTTP_201_CREATED)
