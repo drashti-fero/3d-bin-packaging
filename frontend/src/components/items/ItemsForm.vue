@@ -47,7 +47,7 @@
                 hide-details="auto"
                 class="background-white rounded-lg"
                 dense
-                label="Length*"
+                label="Length(CM)*"
                 required
                 :rules="[(v) => !!v || `Length is required`]"
                 v-model="itemsForm.length"
@@ -59,7 +59,7 @@
                 hide-details="auto"
                 class="background-white rounded-lg"
                 dense
-                label="Width*"
+                label="Width(CM)*"
                 required
                 :rules="[(v) => !!v || `Width is required`]"
                 v-model="itemsForm.width"
@@ -71,7 +71,7 @@
                 hide-details="auto"
                 class="background-white rounded-lg"
                 dense
-                label="Height*"
+                label="Height(CM)*"
                 required
                 :rules="[(v) => !!v || `Height is required`]"
                 v-model="itemsForm.height"
@@ -83,7 +83,7 @@
                 hide-details="auto"
                 class="background-white rounded-lg"
                 dense
-                label="Weight*"
+                label="Weight(KG)*"
                 required
                 :rules="[(v) => !!v || `Weight is required`]"
                 v-model="itemsForm.weight"
