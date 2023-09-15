@@ -73,7 +73,7 @@ export default {
         {
           icon: "mdi-alpha-i-circle",
           title: "Items",
-          to: "/item/",
+          to: "/",
           exact: true,
         },
         {

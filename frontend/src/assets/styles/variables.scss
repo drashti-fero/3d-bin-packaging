@@ -1,0 +1,74 @@
+@use "~ag-grid-community/styles" as ag;
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import "./colors.scss";
+
+// Base Colors
+$body-font-family: "Inter", sans-serif;
+$primaryLighten: rgba(23, 183, 208, 0.5);
+$light_grey: #ebedef;
+$border_width: 1px;
+$border_type: solid;
+$shades: (("light-grey", #ebedef), ("primary", $primary), ("grey", grey));
+
+$greyLighten2: #edecec;
+$greyLighten1: #d2d2d2;
+
+.v-application {
+  .text-h1,
+  .text-h2,
+  .text-h3,
+  .text-h4,
+  .text-h5,
+  .text-h6,
+  .text-headline,
+  .text-title,
+  .text-subtitle-1,
+  .text-subtitle-2,
+  .text-body-1,
+  .text-body-2,
+  .text-button,
+  .text-caption,
+  .text-overline,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $body-font-family !important;
+  }
+}
+
+@include ag.grid-styles(
+  (
+    theme: alpine,
+    alpine-active-color: $primary,
+
+    borders: solid 0px,
+    border-color: $greyLighten1,
+    borders-row: dashed 1px,
+    row-border-color: $greyLighten1,
+
+    header-height: 40px,
+    header-foreground-color: $secondary,
+    header-background-color: #ffffff,
+    header-cell-hover-background-color: #f5f5f5,
+
+    // header-cell-hover-background-color: red,
+    // header-cell-moving-background-color: green,
+    selected-row-background-color: $primaryLighten,
+
+    header-column-resize-handle-color: $greyLighten1,
+    header-column-resize-handle-width: 1px,
+    header-column-resize-handle-height: 26px,
+  )
+);
+
+.ag-theme-alpine {
+  .ag-header-cell {
+    border-top: solid 1px $greyLighten1;
+    border-bottom: dashed 1px $greyLighten1;
+  }
+}
+
+$tabs-bar-background-color: transprent;
