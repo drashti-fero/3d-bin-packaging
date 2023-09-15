@@ -31,7 +31,7 @@ DEBUG = env.bool("DEBUG", default=True)
 DOMAIN = env.str("DOMAIN")
 DOMAIN_IP = env.str("DOMAIN_IP")
 
-ALLOWED_HOSTS = [DOMAIN, DOMAIN_IP]
+ALLOWED_HOSTS = [DOMAIN, DOMAIN_IP, "122d-49-36-88-83.ngrok.io"]
 
 # Application definition
 
@@ -44,8 +44,12 @@ DEFAULT_APPS = [
     'django.contrib.staticfiles',
 ]
 
+<<<<<<< Updated upstream
 THIRD_PARTY_APPS = ["rest_framework",
                     "django_json_widget"]
+=======
+THIRD_PARTY_APPS = ["rest_framework", "corsheaders"]
+>>>>>>> Stashed changes
 
 DJANGO_APPS = ["capacity_quotation", ]
 
@@ -54,6 +58,7 @@ INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + DJANGO_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -94,6 +99,11 @@ DATABASES = {
         "PORT": "5432",
     }
 }
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:8080",
+)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -151,3 +161,7 @@ REST_FRAMEWORK = {
         "rest_framework.renderers.BrowsableAPIRenderer",
     ),
 }
+
+CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
+
+CORS_ALLOW_HEADERS = ['*']
