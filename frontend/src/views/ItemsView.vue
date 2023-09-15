@@ -24,7 +24,7 @@
     </v-row>
 
     <div id="dialogs">
-      <ItemsForm v-model="openItemsDialog" />
+      <ItemsForm v-model="openItemsDialog" @refreshData="getItemsList" />
     </div>
   </div>
 </template>

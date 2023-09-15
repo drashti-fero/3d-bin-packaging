@@ -22,7 +22,7 @@
     </v-row>
 
     <div id="dialogs">
-      <BoxForm v-model="openBoxDialog" />
+      <BoxForm v-model="openBoxDialog" @refreshData="getBoxList" />
     </div>
   </div>
 </template>
