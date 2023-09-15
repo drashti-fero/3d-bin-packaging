@@ -31,7 +31,7 @@ DEBUG = env.bool("DEBUG", default=True)
 DOMAIN = env.str("DOMAIN")
 DOMAIN_IP = env.str("DOMAIN_IP")
 
-ALLOWED_HOSTS = [DOMAIN, DOMAIN_IP, "122d-49-36-88-83.ngrok.io"]
+ALLOWED_HOSTS = [DOMAIN, DOMAIN_IP, "*"]
 
 # Application definition
 
@@ -160,3 +160,8 @@ REST_FRAMEWORK = {
 CORS_ALLOW_METHODS = ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
 
 CORS_ALLOW_HEADERS = ['*']
+
+CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOWED_ORIGINS = [
+    "http://192.168.1.89:8080", "http://localhost:8080", "https://122d-49-36-88-83.ngrok.io"
+]
