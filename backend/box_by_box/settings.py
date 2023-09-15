@@ -44,7 +44,8 @@ DEFAULT_APPS = [
     'django.contrib.staticfiles',
 ]
 
-THIRD_PARTY_APPS = ["rest_framework"]
+THIRD_PARTY_APPS = ["rest_framework",
+                    "django_json_widget"]
 
 DJANGO_APPS = ["capacity_quotation", ]
 
