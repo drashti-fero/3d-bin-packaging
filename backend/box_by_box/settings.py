@@ -44,12 +44,7 @@ DEFAULT_APPS = [
     'django.contrib.staticfiles',
 ]
 
-<<<<<<< Updated upstream
-THIRD_PARTY_APPS = ["rest_framework",
-                    "django_json_widget"]
-=======
-THIRD_PARTY_APPS = ["rest_framework", "corsheaders"]
->>>>>>> Stashed changes
+THIRD_PARTY_APPS = ["rest_framework", "corsheaders", "django_json_widget"]
 
 DJANGO_APPS = ["capacity_quotation", ]
 
