@@ -7,6 +7,7 @@ router = DefaultRouter()
 
 router.register("packaging_spaces", views.PackagingSpacesViewSet, basename="packaging_spaces")
 router.register("items", views.ItemsViewSet, basename="items")
+router.register("capacity_quotation", views.CapacityQuotationViewSet, basename="capacity_quotation")
 
 urlpatterns = []
 
