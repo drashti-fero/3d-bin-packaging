@@ -12,6 +12,7 @@ class PackagingSpacesViewSet(BaseViewSet):
         constants.Action.LIST: serializers.PackagingSpacesSerializer,
         constants.Action.RETRIEVE: serializers.PackagingSpacesSerializer,
         constants.Action.SELECT: serializers.PackagingSpacesSerializer,
+        constants.Action.OPTION: serializers.PackagingSpacesOptionSerializer,
     }
 
 
