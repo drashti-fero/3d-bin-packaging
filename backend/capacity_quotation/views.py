@@ -13,3 +13,14 @@ class PackagingSpacesViewSet(BaseViewSet):
         constants.Action.RETRIEVE: serializers.PackagingSpacesSerializer,
         constants.Action.SELECT: serializers.PackagingSpacesSerializer,
     }
+
+
+class ItemsViewSet(BaseViewSet):
+    authentication_classes = []
+    permission_classes = []
+    model = models.Item
+    view_serializers = {
+        constants.Action.LIST: serializers.ItemSerializer,
+        constants.Action.RETRIEVE: serializers.ItemSerializer,
+        constants.Action.SELECT: serializers.ItemSerializer,
+    }

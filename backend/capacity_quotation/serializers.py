@@ -6,3 +6,9 @@ class PackagingSpacesSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.PackagingSpaces
         fields = "__all__"
+
+
+class ItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Item
+        fields = "__all__"
