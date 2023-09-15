@@ -5,7 +5,7 @@ class ThreeDBinPackingAPI:
     def __init__(self, payload: dict):
         self.api_key = "c0ac439060d83ae3edd654bcdcc71271"
         self.username = "moroh69760@twugg.com"
-        self.base_url = "https://global-api.3dbinpacking.com/packer/findBinSize"  # Replace with the actual API base URL
+        self.base_url = "https://global-api.3dbinpacking.com/packer/pack"  # Replace with the actual API base URL
         self.payload = payload
 
     @staticmethod
@@ -20,16 +20,16 @@ class ThreeDBinPackingAPI:
             "username": self.username,
             "api_key": self.api_key,
             "params": {
-                "images_background_color": "255,255,255",
-                "images_bin_border_color": "59,59,59",
-                "images_bin_fill_color": "230,230,230",
-                "images_item_border_color": "214,79,79",
-                "images_item_fill_color": "177,14,14",
-                "images_item_back_border_color": "215,103,103",
-                "images_sbs_last_item_fill_color": "99,93,93",
-                "images_sbs_last_item_border_color": "145,133,133",
-                "images_width": 100,
-                "images_height": 100,
+                # "images_background_color": "255,255,255",
+                # "images_bin_border_color": "59,59,59",
+                # "images_bin_fill_color": "230,230,230",
+                # "images_item_border_color": "214,79,79",
+                # "images_item_fill_color": "177,14,14",
+                # "images_item_back_border_color": "215,103,103",
+                # "images_sbs_last_item_fill_color": "99,93,93",
+                # "images_sbs_last_item_border_color": "145,133,133",
+                "images_width": 250,
+                "images_height": 250,
                 "images_source": "file",
                 "images_sbs": 1,
                 "item_coordinates": 1,
