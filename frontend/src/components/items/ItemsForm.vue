@@ -123,10 +123,12 @@ export default {
 
   methods: {
     resetForm() {
-      this.openDialog = false;
-
       this.$refs.itemsForm.reset();
       this.$refs.itemsForm.resetValidation();
+    },
+    closeDialog() {
+      this.openDialog = false;
+      this.resetForm();
     },
     submitForm() {
       let data = { ...this.itemsForm };
@@ -138,7 +140,7 @@ export default {
             message: "Item Added Successfully!",
             color: "success",
           });
-          this.resetForm();
+          this.closeDialog();
           this.$bus.$emit("refreshData");
         })
         .catch((err) => {

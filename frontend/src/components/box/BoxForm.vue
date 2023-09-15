@@ -160,10 +160,13 @@ export default {
 
   methods: {
     resetForm() {
-      this.openDialog = false;
-
       this.$refs.boxForm.reset();
       this.$refs.boxForm.resetValidation();
+    },
+    closeDialog() {
+      this.openDialog = false;
+
+      this.resetForm;
     },
     submitForm() {
       let data = { ...this.boxForm };
@@ -175,7 +178,7 @@ export default {
             message: "Box Added Successfully!",
             color: "success",
           });
-          this.resetForm();
+          this.closeDialog();
           this.$bus.$emit("refreshData");
         })
         .catch((err) => {
