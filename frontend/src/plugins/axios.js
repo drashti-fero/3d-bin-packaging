@@ -2,7 +2,7 @@ import router from "@/router";
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://122d-49-36-88-83.ngrok.io",
+  baseURL: process.env.VUE_APP_BASE_URL,
 });
 
 // axiosInstance.interceptors.request.use((config) => {
