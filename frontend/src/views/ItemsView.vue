@@ -41,14 +41,8 @@ export default {
       itemsList: [],
       itemsHeader: [
         {
-          headerName: `Ref No`,
-          field: "ref_no",
-          sortable: true,
-          minWidth: 120,
-        },
-        {
-          headerName: `Name`,
-          field: "name",
+          headerName: `SKU`,
+          field: "sku",
           sortable: true,
           minWidth: 120,
         },
