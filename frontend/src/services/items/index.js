@@ -1,8 +1,8 @@
 import { item } from "@/utils/urlConstants";
 
-export default (axios) => ({
+export default ({ get, post, put }) => ({
   getItemList(params = {}) {
-    return axios.get(`${item.base}`, {
+    return get(`${item.base}`, {
       params: params,
     });
   },
@@ -15,7 +15,7 @@ export default (axios) => ({
     return get(`${item.base}${id}/`);
   },
   addItem(data) {
-    return axios.post(`${item.base}`, data);
+    return post(`${item.base}`, data);
   },
   updateItem(data, id) {
     return put(`${item.base}${id}/`, data);
