@@ -82,6 +82,12 @@ export default {
           to: `/boxes/`,
           exact: true,
         },
+        {
+          icon: "mdi-format-quote-close",
+          title: "Capacity Quotation",
+          to: `/capacity-quotation/`,
+          exact: true,
+        },
       ],
     };
   },
